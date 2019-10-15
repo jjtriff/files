@@ -1,0 +1,31 @@
+[user]
+	email = jjtriff@gmail.com
+	name = Juan Javier Triff Cabanas
+	signingkey = 2894A01C0E649128
+[alias]
+    # one-line log
+    lg = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --graph --all -15
+
+    a = add
+    ap = add -p
+    c = commit --verbose
+    ca = commit -a --verbose
+    cm = commit -m
+    cam = commit -a -m
+    m = commit --amend --verbose
+    
+    d = diff
+    ds = diff --stat
+    dc = diff --cached
+
+    st = status
+    co = checkout
+    cob = checkout -b
+    # list branches sorted by last modified
+    b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+
+    # list aliases
+    la = "!git config -l | grep alias | cut -c 7-"
+	chf = diff --name-only
+[core]
+	editor = nano
